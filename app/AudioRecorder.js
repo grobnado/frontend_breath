@@ -107,12 +107,13 @@ const AudioRecorder = () => {
     formData.append('audio', audioBlob, 'audio.wav');
 
     try {
-      const response = await fetch('https://server-flask-mjsv.onrender.com/predict', {
+      const response = await fetch('https://72b0-95-174-113-231.ngrok-free.app/predict', {
         method: 'POST',
         body: formData
       });
       const data = await response.text();
-      setResponseMessage(data);
+      let obj = JSON.parse(data);
+      setResponseMessage(obj['prediction']);
     } catch (error) {
       console.error('Error sending audio to server:', error);
       setResponseMessage('Failed to send audio to server');
