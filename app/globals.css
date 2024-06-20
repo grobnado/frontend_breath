@@ -1,0 +1,51 @@
+html{
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+
+}
+.record{
+  height: calc(111px + 2vmin);
+  width: calc(111px + 2vmin);
+  border-radius: 200px;
+  background-color: #c03db944;
+  color: rgb(232, 210, 236);
+  font-size: 20px;
+  outline: none;
+  border: none;
+
+}
+.record:active{
+  background-color: #d246cb44;
+}
+.recordPlay{
+  background-color: #e855e144;
+
+}
+#waveform {
+  width: 600px;
+  margin: 20px auto;
+}
